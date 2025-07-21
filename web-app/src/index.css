@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+html,body{
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100vh;
+}
+body{
+  background-color:whitesmoke;
+  font-family:'Poppins',Verdana, Geneva, Tahoma, sans-serif;
+}
+.navbardiv{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  color:white;
+  background-color:red;
+}
+.navbardiv div{
+  width:100%;
+  display:flex;
+  align-items: center;
+}
+.navbardiv .logodiv{
+  justify-content:left;
+  margin-left:3%;
+}
+.navbardiv .logodiv h1{
+  font-weight:400;
+}
+.navbardiv .searchbar{
+  position:relative;
+  justify-content:center;
+  height:50%;
+  overflow:hidden;
+  border-radius:40px;
+}
+.navbardiv .searchbar .i{
+  position:absolute;
+  color:gray;
+  right:4%;
+}
+.navbardiv .searchbar input{
+  width:100%;
+  height:100%;
+  padding:3% 4%;
+  outline:none;
+  font-family:'Poppins',Verdana, Geneva, Tahoma, sans-serif;
+  border:none;
+}
+.navbardiv .accdiv{
+  justify-content:right;
+  text-align:center;
+  margin-right:3%;
+}
+.navbardiv .accdiv .link{
+  text-decoration:none;
+  font-size:x-large;
+  color:white;
+  line-height:20px;
+}
+.navbardiv .accdiv span{
+  font-size:small;
+  
+}
+.navbardiv .categorydiv{
+  position:absolute;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  bottom:-26%;
+  background-color:white;
+}
+.navbardiv .categorydiv .categorylinks{
+  width:100%;
+  text-align:center;
+  text-decoration:none;
+  color:red;
+  box-shadow:0px 0px 5px rgba(0,0,0,0.1);
+}
+.maincontentdiv{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  width:98%;
+  margin:5% auto;
+  align-items:center;
+  gap:15px;
+}
+.contentdiv{
+  overflow:hidden;
+  flex:1 1 calc(33.333% - 30px);
+  border-radius:10px;
+  background-color:white;
+  box-shadow:0px 0px 10px 5px rgba(0,0,0,0.1);
+}
+.contentdiv img{
+  width:100%;
+}
+.contentdiv .itemdetaildiv{
+  width:90%;
+  margin:auto;
+}
+.contentdiv .ratingp{
+  display:flex;
+  align-items: center;
+  gap:5px;
+  line-height: 0%;
+}
+.contentdiv .rated{
+  color:orange;
+}
+.contentdiv .rupcuisinediv{
+  display:flex;
+  justify-content:left;
+  align-items: center;
+  gap:15px;
+  line-height: 0%;
+}
+.contentdiv .rupcuisinediv p{
+  color:white;
+  padding:3% 6%;
+  border-radius:40px;
+  font-size:small;
+  background-color:darkgray;
+}
+.contentdiv .btns{
+  display:flex;
+  justify-content: center;
+  gap:8px;
+  margin-top:2%;
+  margin-bottom:4%;
+}
+.contentdiv .see,.contentdiv button{
+  width:100%;
+  padding:2%;
+  border:none;
+  outline:none;
+  border-radius:40px;
+  font-family: 'Poppins',Verdana, Geneva, Tahoma, sans-serif;
+}
+.contentdiv .see{
+  text-decoration:none;
+  background-color:white;
+  color:red;
+  text-align:center;
+  box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+}
+.contentdiv button{
+  background-color:red;
+  color:white; 
+}
+.footer{
+  display:flex;
+  text-align:left;
+  padding:3%;
+  background-color:red;
+  color:white;
+  justify-content:space-evenly;
+}
+.footer .aboutdiv,.footer .contactdiv{
+  display:flex;
+  align-items:left;
+  gap:5px;
+  flex-direction:column;
+}
+.footer .bottomlinks{
+  text-decoration:none;
+  color:white;
+}
+.footer .socialfollowdiv{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+.footer .i{
+  font-size:x-large;
+}

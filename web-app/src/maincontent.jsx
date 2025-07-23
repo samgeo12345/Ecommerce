@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import axios from "axios";
-function Maincontents(){
+function Maincontents({searchTerm}){
   const [Recipies, setRecipes] = useState([]);
 
   useEffect(() => {
@@ -17,11 +17,13 @@ function Maincontents(){
       });
   }, []);
 
-  
+  const filteredRecipies = Recipies.filter((recipe) =>
+    recipe.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className="maincontentdiv">
-        { Recipies.map((p)=>(
+        { filteredRecipies.map((p)=>(
           <div className="contentdiv" key={p.id}>
             <img src={p.image} alt="" />
             <div className="itemdetaildiv">
@@ -40,7 +42,7 @@ function Maincontents(){
             <p>{p.cuisine}</p>
             </div>
             <div className="btns">
-            <Link to={`/pro/${p.id}`} className="see">See details</Link>
+            <Link to={`/recipe/${p.id}`} className="see">See details</Link>
             <button>Order now</button>
             </div>
             </div>

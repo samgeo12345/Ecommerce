@@ -9,7 +9,7 @@ function Footer() {
     <>
     <div className="footer">
         <div className="bottomhead">
-            <h1><FontAwesomeIcon className='i' icon={faBellConcierge} /> Resta.</h1>
+            <h1><FontAwesomeIcon className='i' icon={faBellConcierge} /> <span>Resta.</span></h1>
             <p><FontAwesomeIcon className='i' icon={faCopyright} /> 2025 | All rights reserved.</p>
         </div>
         <div className="aboutdiv">
@@ -21,15 +21,15 @@ function Footer() {
         </div>
         <div className="contactdiv">
             <h3>Contact Us</h3>
-            <Link className='bottomlinks'>Resta12d@gmail.com</Link>
-            <Link className='bottomlinks'>Restaweb45@yahoo.com</Link>
-            <Link className='bottomlinks'>Restahotel@outlook.com</Link>
+            <Link className='bottomlinks'>Gmail.com</Link>
+            <Link className='bottomlinks'>Yahoo.com</Link>
+            <Link className='bottomlinks'>Outlook.com</Link>
         </div>
         <div className="socialfollowdiv">
-            <Link className='bottomlinks'><FontAwesomeIcon className='i' icon={faWhatsapp} /></Link>
-            <Link className='bottomlinks'><FontAwesomeIcon className='i' icon={faLinkedinIn} /></Link>
-            <Link className='bottomlinks'><FontAwesomeIcon className='i' icon={faFacebook} /></Link>
-            <Link className='bottomlinks'><FontAwesomeIcon className='i' icon={faTelegram} /></Link>
+            <Link className='bottomlinks'><FontAwesomeIcon className='sociali' icon={faWhatsapp} /></Link>
+            <Link className='bottomlinks'><FontAwesomeIcon className='sociali' icon={faLinkedinIn} /></Link>
+            <Link className='bottomlinks'><FontAwesomeIcon className='sociali' icon={faFacebook} /></Link>
+            <Link className='bottomlinks'><FontAwesomeIcon className='sociali' icon={faTelegram} /></Link>
         </div>
     </div>
     </>

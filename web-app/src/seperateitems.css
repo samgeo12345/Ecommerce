@@ -1,0 +1,89 @@
+.maincontentdiv2{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100vh;
+}
+.contentdiv2{
+    display:flex;
+    overflow:hidden;
+    width:90%;
+    justify-content:center;
+    align-items:center;
+}
+.contentdiv2 img{
+    width:100%;
+    border-radius:20px;
+    object-fit:cover;
+}
+.imgdiv2,.itemdetaildiv2{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    padding:4%;
+    align-items:left;
+}
+.contentdiv2 .ratingp2{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    justify-content:left;
+}
+.contentdiv2 .rupcuisinediv2{
+    display:flex;
+    align-items:center;
+    justify-content:left;
+    gap:10px;
+}
+.contentdiv2 .rupcuisinediv2 p{
+  color:white;
+  padding:0.5% 5%;
+  border-radius:40px;
+  font-size:small;
+  background-color:darkgray;
+}
+.contentdiv2 .btns2{
+    display:flex;
+    gap:15px;
+    width:70%;
+    align-items: center;
+    justify-content: left;
+}
+.incrementbtn,.decrementbtn{
+    border-radius:0px;
+    outline:none;
+    border:none;
+    font-weight:bold;
+    width:70%;
+    color:red;
+    border-radius:5px;
+    background-color:white;
+    box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+    padding:2% 0%;
+}
+.rated{
+    color:orange;
+}
+.contentdiv2 .btns2 .button{
+    border:none;
+    outline:none;
+    width:100%;
+    padding:3% 2%;
+    font-family:'Poppins',Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    background-color:red;
+    border-radius:5px;
+}
+.contentdiv2 .countersdiv{
+    display:flex;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+}
+.contentdiv2 .countersdiv p{
+    text-align:center;
+    width:100%;
+    color:red;
+}

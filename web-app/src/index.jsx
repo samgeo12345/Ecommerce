@@ -2,7 +2,10 @@ import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBellConcierge, faMagnifyingGlass, faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import Maincontents from './maincontent.jsx'
-function Homepage(){
+function Homepage({ searchTerm, onSearch }) {
+  const handleInput = (e) => {
+        onSearch(e.target.value);
+    };
     return(
         <>
         <div className="navbardiv">
@@ -11,7 +14,7 @@ function Homepage(){
             </div>
             <div className="searchdiv">
                 <div className="searchbar">
-                    <input type="text" placeholder="Search"/>
+                    <input type="text" placeholder="Search" onInput={handleInput}/>
                     <FontAwesomeIcon className='i' icon={faMagnifyingGlass} />
                 </div>
             </div>
@@ -27,7 +30,9 @@ function Homepage(){
             </div>
         </div>
         <div className="mainpagediv">
-            <Maincontents/>
+            <br />
+            <br />
+            <Maincontents searchTerm={searchTerm}/>
         </div>
         </>
     );

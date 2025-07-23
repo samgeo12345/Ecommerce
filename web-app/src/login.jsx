@@ -9,7 +9,7 @@ function Login(){
         <div className="loginpagediv">
             <div className="wholelogsetdiv">
                 <div className="logheaderdiv">
-                    <Link to="/" className='exithome'><FontAwesomeIcon icon={faCircleChevronLeft} /> back</Link>
+                    <Link to="/" className='exithome'><FontAwesomeIcon icon={faCircleChevronLeft} /> Home</Link>
                     <p><FontAwesomeIcon icon={faBellConcierge} className="i"/> Resta.<br></br><span>The platform for order meals</span></p>
                 </div>
                 <div className="logindiv">

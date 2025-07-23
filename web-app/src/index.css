@@ -92,7 +92,6 @@ body{
 .contentdiv{
   overflow:hidden;
   flex:1 1 calc(33.333% - 30px);
-  border-radius:10px;
   background-color:white;
 }
 .contentdiv img{

@@ -1,0 +1,112 @@
+.maincontentdiv3{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    width:100%;
+}
+.contentdiv3{
+    display:flex;
+    overflow:hidden;
+    width:90%;
+    justify-content:center;
+    align-items:center;
+}
+.contentdiv3 img{
+    width:100%;
+    border-radius:20px;
+    object-fit:cover;
+}
+
+.imgdiv3,.enterdetaildiv{
+    width:100%;
+    display:flex;
+    overflow:hidden;
+    text-align: center;
+    justify-content:center;
+    flex-direction:column;
+    padding:4%;
+    align-items:left;
+}
+.enterdetaildiv{
+    gap:20px;
+}
+.imgdiv3{
+    position:relative;
+}
+.imgdiv3 .quantselectdiv{
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:84%;
+    overflow:hidden;
+    height:84%;
+    color:white;
+    border-radius:20px;
+    background-color:rgba(0,0,0,0.5);
+    flex-direction:column;
+}
+.imgdiv3 .quantselectdiv p{
+    font-weight:bold;
+    padding:2%;
+    text-align:center;
+    backdrop-filter: blur(8px);
+    background-color:rgba(255,255,255,0.3);
+    border-radius:5px;
+}
+.enterdetaildiv .cancelorderdiv{
+    display:flex;
+    gap:10px;
+    width:100%;
+}
+.enterdetaildiv h1{
+    color:red;
+}
+.enterdetaildiv input,
+.enterdetaildiv textarea{
+    font-family:'Poppins',Verdana, Geneva, Tahoma, sans-serif;
+    padding:4%;
+    outline:none;
+    border:none;
+    border-radius:5px;
+    box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+    
+}
+.enterdetaildiv .cancelorderdiv .cancelbtn,
+.enterdetaildiv .cancelorderdiv .rupeebtn{
+    width:90%;
+    text-align:center;
+    padding:2%;
+    border-radius:40px;
+    text-decoration:none;
+}
+.cancelbtn{
+    background-color:white;
+    color:red;
+    box-shadow:0px 0px 1px rgba(0,0,0,0.9);
+}
+.rupeebtn{
+    background-color:red;
+    color:white;
+}
+
+
+@media(max-width:800px){
+    .contentdiv3{
+        width:100%;
+    }
+}
+@media(max-width:700px){
+    .maincontentdiv3{
+        height:auto;
+    }
+    .contentdiv3{
+        flex-direction: column;
+        width:90%;
+    }
+    .imgdiv3 .quantselectdiv{
+        width:92.5%;
+        height:93%;
+    }
+}

@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { useParams } from "react-router-dom";
+import { faStar ,faSpinner} from '@fortawesome/free-solid-svg-icons';
+import { useParams,Link } from "react-router-dom";
 import './seperateitems.css'
 import Counter from './counters.jsx'
 
 function RecipeItems() {
   const [Recipe, setRecipe]= useState(null);
+  const [count, setCount] = useState(1);
   const{id} = useParams();
 
   useEffect(() => {
@@ -17,7 +18,10 @@ function RecipeItems() {
       .catch((err) => console.error("Error fetching product:", err));
   }, []);
 
-  if (!Recipe) return <p>Loading…</p>;
+  if (!Recipe){ return <div className="loadingdiv">
+    <h2><FontAwesomeIcon icon={faSpinner} spin/> Loading</h2>
+    </div>
+  };
 
   return (
     <div className="maincontentdiv2">
@@ -43,9 +47,11 @@ function RecipeItems() {
             </div>
             <div className="btns2">
             <div className="countersdiv">
-              <Counter/>
+              <Counter onCountChange={setCount}/>
             </div>
-            <button className="button">Order now</button>
+            <div className="orderbtndiv">
+            <Link to={`/order/${Recipe.id}`} state={{quantity:count}} className="button">Order now</Link>
+            </div>
             </div>
             </div>
           </div>

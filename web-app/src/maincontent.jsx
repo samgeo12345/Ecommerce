@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faFaceMeh, faSpinner, faStar } from '@fortawesome/free-solid-svg-icons';
 import axios from "axios";
 function Maincontents({searchTerm}){
-  const [Recipies, setRecipes] = useState([]);
+  const [Recipies, setRecipes] = useState(null);
 
   useEffect(() => {
     axios
@@ -13,17 +13,29 @@ function Maincontents({searchTerm}){
           setRecipes(result.data.recipes);
       })
       .catch((e) => {
-        console.error("Error Fetching ", e);
+          console.error("Error Fetching ", e);
       });
   }, []);
 
+  if (!Recipies){ return <div className="loadingdiv">
+    <h2><FontAwesomeIcon icon={faSpinner} spin/> Loading</h2>
+    </div>
+  };
+  
   const filteredRecipies = Recipies.filter((recipe) =>
     recipe.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  if(filteredRecipies.length===0){
+    return <div className="noitemdiv">
+        <FontAwesomeIcon icon={faFaceMeh} className="i" shake/>
+        <h2>No Items Found</h2>
+        </div>
+  }
+
   return (
     <div className="maincontentdiv">
-        { filteredRecipies.map((p)=>(
+        {filteredRecipies.map((p)=>(
           <div className="contentdiv" key={p.id}>
             <img src={p.image} alt="" />
             <div className="itemdetaildiv">
@@ -38,12 +50,11 @@ function Maincontents({searchTerm}){
               </div>
             </p>
             <div className="rupcuisinediv">
-            <h3>₹ {p.caloriesPerServing-1}</h3>
+            <h3>₹ {p.caloriesPerServing}</h3>
             <p>{p.cuisine}</p>
             </div>
             <div className="btns">
-            <Link to={`/recipe/${p.id}`} className="see">See details</Link>
-            <button>Order now</button>
+            <Link to={`/recipe/${p.id}`} className="see">Select</Link>
             </div>
             </div>
           </div>

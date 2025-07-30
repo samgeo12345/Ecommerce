@@ -21,16 +21,8 @@ function Homepage({ searchTerm, onSearch }) {
             <div className="accdiv">
                 <Link to='/login' className='link'><FontAwesomeIcon className='i' icon={faCircleUser} /><br /><span>Login</span></Link>
             </div>
-            <div className="categorydiv">
-                <Link to="/veg" className='categorylinks catlink1'>Veg Items</Link>
-                <Link to="/nonveg" className='categorylinks'>Non-Veg Items</Link>
-                <Link to="/drinks" className='categorylinks'>Drinks</Link>
-                <Link to="/sweets" className='categorylinks'>Sweets</Link>
-                <Link to="/desserts" className='categorylinks'>Desserts</Link>
-            </div>
         </div>
         <div className="mainpagediv">
-            <br />
             <br />
             <Maincontents searchTerm={searchTerm}/>
         </div>

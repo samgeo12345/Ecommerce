@@ -10,7 +10,6 @@ function Footer() {
     <div className="footer">
         <div className="bottomhead">
             <h1><FontAwesomeIcon className='i' icon={faBellConcierge} /> <span>Resta.</span></h1>
-            <p><FontAwesomeIcon className='i' icon={faCopyright} /> 2025 | All rights reserved.</p>
         </div>
         <div className="aboutdiv">
             <h3>About Us</h3>
@@ -26,10 +25,14 @@ function Footer() {
             <Link className='bottomlinks'>Outlook.com</Link>
         </div>
         <div className="socialfollowdiv">
+            <h3>Follow US</h3>
+            <div className="socialiconsdiv">
             <Link className='bottomlinks'><FontAwesomeIcon className='sociali' icon={faWhatsapp} /></Link>
             <Link className='bottomlinks'><FontAwesomeIcon className='sociali' icon={faLinkedinIn} /></Link>
             <Link className='bottomlinks'><FontAwesomeIcon className='sociali' icon={faFacebook} /></Link>
             <Link className='bottomlinks'><FontAwesomeIcon className='sociali' icon={faTelegram} /></Link>
+            </div>
+            <p><FontAwesomeIcon className='i' icon={faCopyright} /> 2025 | All rights reserved.</p>
         </div>
     </div>
     </>

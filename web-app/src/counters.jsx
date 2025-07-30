@@ -3,8 +3,13 @@ import axios from "axios";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import './seperateitems.css'
-function Counters() {
+function Counters({onCountChange}) {
   const [count, setCount] = useState(1);
+
+  useEffect(()=>{
+    onCountChange(count);
+  },[count]);
+
   if(count<1){
     setCount(count + 1);
   }

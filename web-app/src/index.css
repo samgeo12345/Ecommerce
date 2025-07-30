@@ -63,6 +63,7 @@ body{
 .navbardiv .accdiv span{
   font-size:small;
 }
+/*
 .navbardiv .categorydiv{
   position:absolute;
   width:100%;
@@ -79,19 +80,46 @@ body{
   color:red;
   box-shadow:0px 0px 5px rgba(0,0,0,0.1);
 }
+*/
 .maincontentdiv{
-  display:flex;
+  display:grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
   justify-content:center;
-  flex-wrap:wrap;
   width:98%;
   margin:auto;
   align-items:center;
   gap:20px;
   margin-bottom:2%;
 }
+.loadingdiv{
+  width:100%;
+  display:flex;
+  justify-content: center;
+  color:red;
+  align-items: center;
+  height:100vh;
+}
+.loadingdiv h2{
+  font-weight:400;
+}
+.noitemdiv{
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  color:gray;
+  align-items: center;
+  height:100vh;
+}
+.noitemdiv h2{
+  font-weight:400;
+}
+.noitemdiv .i{
+  animation-duration: 2s;
+  font-size:50px;
+}
 .contentdiv{
   overflow:hidden;
-  flex:1 1 calc(33.333% - 30px);
   background-color:white;
 }
 .contentdiv img{
@@ -134,7 +162,7 @@ body{
   margin-top:2%;
   margin-bottom:6%;
 }
-.contentdiv .see,.contentdiv button{
+.contentdiv .see,.contentdiv .order{
   width:100%;
   padding:2%;
   border:none;
@@ -144,29 +172,30 @@ body{
 }
 .contentdiv .see{
   text-decoration:none;
-  background-color:white;
-  color:red;
-  text-align:center;
-  box-shadow:0px 0px 1px rgba(0,0,0,0.9);
-}
-.contentdiv button{
   background-color:red;
-  color:white; 
+  color:white;
+  text-align:center;
 }
 .footer{
-  display:flex;
-  text-align:left;
+  display:grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  text-align:center;
   padding:3%;
   background-color:red;
   color:white;
-  justify-content:space-evenly;
+}
+.footer .bottomhead{
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 .footer span{
   font-weight:400;
 }
+
 .footer .aboutdiv,.footer .contactdiv{
   display:flex;
-  align-items:left;
+  align-items:center;
   gap:5px;
   flex-direction:column;
 }
@@ -176,9 +205,61 @@ body{
 }
 .footer .socialfollowdiv{
   display:flex;
+  flex-direction: column;
+  align-items:center;
+}
+.footer .socialiconsdiv{
+  display:flex;
   align-items:center;
   gap:15px;
 }
 .footer .sociali{
   font-size:x-large;
+}
+
+
+@media(max-width:800px){
+  .navbardiv .logodiv{
+    width:70%;
+  }
+  .navbardiv .accdiv{
+    width:35%;
+  }
+  .footer{
+    gap:30px;
+  }
+}
+
+@media(max-width:630px){
+  .navbardiv .logodiv{
+    width:70%;
+  }
+  .navbardiv .accdiv{
+    width:35%;
+  }
+  .maincontentdiv{
+    width:90%;
+  }
+  .contentdiv .see{
+    padding:3%;
+  }
+}
+@media(max-width:500px){
+  .navbardiv{
+    padding-bottom:10%;
+  }
+  .navbardiv .searchdiv{
+    position:absolute;
+    bottom:10%;
+    width:95%;
+  }
+  .navbardiv .searchbar{
+    border-radius:5px;
+  }
+  .navbardiv .logodiv{
+    width:100%;
+  }
+  .navbardiv .accdiv{
+    width:100%;
+  }
 }

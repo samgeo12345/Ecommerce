@@ -50,7 +50,7 @@ function Maincontents({searchTerm}){
               </div>
             </p>
             <div className="rupcuisinediv">
-            <h3>₹ {p.caloriesPerServing}</h3>
+            <h3>₹ {p.caloriesPerServing-1}</h3>
             <p>{p.cuisine}</p>
             </div>
             <div className="btns">

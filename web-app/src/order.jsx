@@ -42,7 +42,7 @@ function OrderItems() {
             <textarea type="text" placeholder="Address"></textarea>
             <div className="cancelorderdiv">
             <Link to="/" className="cancelbtn">Cancel</Link>
-            <Link className="rupeebtn">₹ {(Orders.caloriesPerServing-1)*quantity}</Link>
+            <Link state={{quantity}} className="rupeebtn">₹ {(Orders.caloriesPerServing-1)*quantity}</Link>
             </div>
             </div>
         </div>

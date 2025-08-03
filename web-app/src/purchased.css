@@ -1,9 +1,17 @@
 .wholepurchaseddiv{
+    position:relative;
     display:flex;
     justify-content: center;
     align-items: center;
     width:100%;
     height:100vh;
+}
+.wholepurchaseddiv .tohome{
+    top:4%;
+    left:4%;
+    position:absolute;
+    text-decoration:none;
+    color:gray;
 }
 .purchaseddiv{
     text-align:center;

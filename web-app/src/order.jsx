@@ -5,13 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar ,faSpinner} from '@fortawesome/free-solid-svg-icons';
 import { useParams } from "react-router-dom";
 import './order.css'
-import RecipeItems from "./seperateitem";
 
 function OrderItems() {
   const [Orders, setOrders]= useState(null);
   const{id} = useParams();
   const location = useLocation();
   const quantity = location.state?.quantity || 1;
+  const [names,setNames]=useState('');
+  const [phone,setPhone]=useState('');
+  const [address,setAddress]=useState('');
 
   useEffect(() => {
     axios
@@ -37,12 +39,38 @@ function OrderItems() {
             </div>
             <div className="enterdetaildiv">
             <h1>Enter Details</h1>
-            <input type="text" placeholder="Name"/>
-            <input type="number" placeholder="Phone no"/>
-            <textarea type="text" placeholder="Address"></textarea>
+            <input type="text" placeholder="Name" id="enter_name" value={names} onChange={(e)=>setNames(e.target.value)}/>
+            <input type="number" placeholder="Phone no" id="enter_phone" value={phone} onChange={(e)=>setPhone(e.target.value)}/>
+            <textarea type="text" placeholder="Address" id="enter_address" value={address} onChange={(e)=>setAddress(e.target.value)}></textarea>
             <div className="cancelorderdiv">
             <Link to="/" className="cancelbtn">Cancel</Link>
-            <Link state={{quantity}} className="rupeebtn">₹ {(Orders.caloriesPerServing-1)*quantity}</Link>
+            <Link to="/confirm" state={{quantity,name:names,number:phone,place:address}} id="enter_btn" 
+  onClick={(e) => {
+    let valid = true;
+
+    if (!names.trim()) {
+      document.getElementById("enter_name").style.boxShadow = "0px 0px 1px 0.5px rgba(255,0,0,0.9)";
+      document.getElementById("enter_phone").style.boxShadow = "";
+      document.getElementById("enter_address").style.boxShadow = "";
+      valid = false;
+    }
+    else if (!phone.trim()) {
+      document.getElementById("enter_name").style.boxShadow = "";
+      document.getElementById("enter_phone").style.boxShadow = "0px 0px 1px 0.5px rgba(255,0,0,0.9)";
+      document.getElementById("enter_address").style.boxShadow = "";
+      valid = false;
+    }
+    else if (!address.trim()) {
+      document.getElementById("enter_name").style.boxShadow = "";
+      document.getElementById("enter_phone").style.boxShadow = "";
+      document.getElementById("enter_address").style.boxShadow = "0px 0px 1px 0.5px rgba(255,0,0,0.9)";
+      valid = false;
+    }
+
+    if (!valid) {
+      e.preventDefault();
+    }
+  }} className="rupeebtn">₹ {(Orders.caloriesPerServing-1)*quantity}</Link>
             </div>
             </div>
         </div>

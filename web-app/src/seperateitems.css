@@ -104,5 +104,6 @@
     .contentdiv2{
         flex-direction: column;
         width:90%;
+        padding-bottom:5%;
     }
 }

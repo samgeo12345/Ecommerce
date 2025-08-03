@@ -1,0 +1,67 @@
+.wholecreditcarddiv{
+    display:flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    background-color:whitesmoke;
+    height:100vh;
+}
+.creditcarddiv{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    width:80%;
+    border-radius:8px;
+    box-shadow:0px 0px 20px 10px rgba(0,0,0,0.1);
+    padding:3%;
+    background-color:white;
+    flex-direction:column;
+}
+.creditcarddiv h1{
+    color:red;
+}
+.cardinputs{
+    display:grid;
+    gap:10px;
+    width:100%;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+}
+.paybtndiv{
+    width:100%;
+    text-align:right;
+}
+.cardinputs input{
+    padding:4%;
+    outline:none;
+    border:none;
+    background-color:whitesmoke;
+    border-radius:5px;
+    font-family: 'Poppins',Verdana, Geneva, Tahoma, sans-serif;
+}
+.creditcarddiv hr{
+    width:100%;
+}
+.paybtndiv button{
+    padding:2%;
+    width:100%;
+    outline:none;
+    border:none;
+    font-weight:bold;
+    border-radius:5px;
+    background-color:red;
+    color:white;
+    font-family: 'Poppins',Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+@media(max-width:500px){
+    .creditcarddiv{
+        width:100%;
+        border-radius: 0;
+    }
+    .paybtndiv button{
+        padding:3%;
+    }
+}

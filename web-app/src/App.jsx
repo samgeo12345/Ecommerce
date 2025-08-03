@@ -5,6 +5,8 @@ import RecipeItem from './seperateitem.jsx'
 import Order from './order.jsx'
 import Login from './login.jsx'
 import SignUp from './signup.jsx'
+import Confirm from './confirmorder.jsx'
+import Purchased from './purchased.jsx'
 import Footer from './footer.jsx'
 function App() {
   const [searchTerm,setSearchTerm] = useState("");
@@ -34,6 +36,12 @@ function App() {
         }/>
         <Route path="/signup" element={
           <SignUp/>
+        }/>
+        <Route path="/confirm" element={
+          <Confirm/>
+        }/>
+        <Route path="/purchased" element={
+          <Purchased/>
         }/>
       </Routes>
     </>
